@@ -11,6 +11,7 @@ $update = json_decode($update, TRUE);
 $chatID = $update['message']['from']['id'];
 $name = $update['message']['from']['first_name'];
 $text = $update['message']['text'];
+$name2= $update['message']['from']['last_name'];
 
 
 
@@ -25,10 +26,10 @@ switch($text)
 {
 		case"/start":
 		sendMessage($chatID,"hi $name how can i help You!!");
-		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber_and_password_with_space");		
+		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber");		
 		break;
 		case"/hello":
-		sendMessage($chatID,"hello ..cheese");
+		sendMessage($chatID,"hello $name2..cheese");
 		break;
 		case"/my_name":
 		sendMessage($chatID,$name);
@@ -37,7 +38,7 @@ switch($text)
 		sendMessage($chatID,"I am a vardhaman Bot..What's Next?");
 		break;
 		default:
-		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber_and_password_with_space");
+		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber");
 		
 		
 		
