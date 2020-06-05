@@ -41,11 +41,15 @@ if($exec==1)
 "ok"=> "SignIn"
 );
 function login($url,$data){
-    $fp = fopen("cookie.txt", "w");
-    fclose($fp);
+  //  $fp = fopen("cookie.txt", "w");
+    //fclose($fp);
     $login = curl_init();
-    curl_setopt($login, CURLOPT_COOKIEJAR, "cookie.txt");
-    curl_setopt($login, CURLOPT_COOKIEFILE, "cookie.txt");
+    //curl_setopt($login, CURLOPT_COOKIEJAR, "cookie.txt");
+    //curl_setopt($login, CURLOPT_COOKIEFILE, "cookie.txt");
+	$tmpfname = dirname(__FILE__).'/'.$_COOKIE['PHPSESSID'].'.txt';
+	curl_setopt($login, CURLOPT_COOKIEFILE, $tmpfname);
+	curl_setopt($login, CURLOPT_COOKIEJAR, $tmpfname);
+    
     curl_setopt($login, CURLOPT_TIMEOUT, 40000);
     curl_setopt($login, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($login, CURLOPT_URL, $url);
