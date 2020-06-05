@@ -26,18 +26,20 @@ switch($text)
 {
 		case"/start":
 		sendMessage($chatID,"hi $name how can i help You!!");
-		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber_and_password_with_space");
-		
+		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber_and_password_with_space");		
 		break;
 		case"/hello":
 		sendMessage($chatID,"hello ..cheese");
+		break;
 		case"/my_name":
 		sendMessage($chatID,$name);
+		break;
 		case"/who_am_i":
 		sendMessage($chatID,"I am a vardhaman Bot..What's Next?");
 		break;
 		default:
 		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber_and_password_with_space");
+		
 		
 		
 
