@@ -84,9 +84,9 @@ $c=login("http://studentscorner.vardhaman.org/Students_Corner_Frame.php",$data);
 	{
 		if($q!=0)
 		{
-		echo "<tr>";
-	sendMessage($chatID,$link->plaintext."<br>");
-	echo "</tr>";
+		//echo "<tr>";
+	sendMessage($chatID,$link->plaintext);
+	//echo "</tr>";
 	break;
 		}
 		$q=1;
