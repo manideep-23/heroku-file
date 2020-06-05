@@ -76,13 +76,10 @@ $res= login("http://studentscorner.vardhaman.org/student_corner_index.php",$data
 	}
 	 if($flag==1)
  {
-$c=login("http://studentscorner.vardhaman.org/Students_Corner_Frame.php",$data);	 
-	$html =new simple_html_dom();
-	$html->load($c);
 	$c=login("http://studentscorner.vardhaman.org/src_programs/students_corner/CreditRegister/credit_register.php",$data);	 
 	$html =new simple_html_dom();
 	$html->load($c);
-	echo "<table width=160>";
+	//echo "<table width=160>";
 	$q=0;
 	foreach($html->find("font[color=blue][size=4]") as $link)
 	{
@@ -100,9 +97,9 @@ $c=login("http://studentscorner.vardhaman.org/Students_Corner_Frame.php",$data);
 	$html =new simple_html_dom();
 	$html->load($c);
 	
-$c=0;
+$u=0;
 	foreach($html->find("font[size=5]") as $link)
-	{$c=1;
+	{$u=1;
 		//echo "Attendance :";
 		//echo "<br>";
 	sendMessage($chatID,"Attendance Percentage : ".$link->plaintext);
@@ -110,7 +107,7 @@ $c=0;
 	
 	}	
 	
-	if($c==0)
+	if($u==0)
 	{
 		sendMessage($chatID,"Attendance Percentage : Currently not available");
 
