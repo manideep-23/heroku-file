@@ -37,6 +37,8 @@ switch($text)
 		case"/who_am_i":
 		sendMessage($chatID,"I am a vardhaman Bot..What's Next?");
 		break;
+		case"/rollnumber":
+		sendMessage($chatID,"Enter Your Rollnumber");
 		default:
 		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber");
 		
