@@ -17,7 +17,7 @@ $text = $update['message']['text'];
 $agg = json_encode($update,JSON_PRETTY_PRINT);
 
 
- 
+ echo "byee";
 
 
 
