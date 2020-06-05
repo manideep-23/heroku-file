@@ -18,8 +18,7 @@ $agg = json_encode($update,JSON_PRETTY_PRINT);
 
 
  echo "byee";
-sendMessage($chatID,"choose option : /start \n /hello \n /my name \n /rollnumber_and_password_with_space");
- 
+
 
 
 switch($text)
