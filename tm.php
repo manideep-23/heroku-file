@@ -17,12 +17,16 @@ $name2= $update['message']['from']['last_name'];
 $agg = json_encode($update,JSON_PRETTY_PRINT);
 
 $exec=0;
+$w=0;
  if(begnWith($text,"16881"))
  {
 	 if(strlen($text)==10)
 		 $exec=1;
 	 else
+	 {
 		sendMessage($chatID,"Enter the Valid Rollnumber!"); 
+		 $w=1;
+	 }
  }
 if($exec==1)
 {
@@ -124,6 +128,8 @@ $c=0;
 
 if($exec==0)
 {
+	if($w==0)
+	{
 switch($text)
 {
 	
@@ -142,13 +148,14 @@ switch($text)
 		break;
 		case"/rollnumber":
 		sendMessage($chatID,"Enter Your Rollnumber");
+		break;
 		default:
 		sendMessage($chatID,"options You have : /start \n /hello \n /my_name \n /who_am_i  \n /rollnumber");
 		
 		
 
 }
-
+}
 }
 
 
