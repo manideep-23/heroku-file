@@ -100,7 +100,7 @@ $c=0;
 	{$c=1;
 		//echo "Attendance :";
 		//echo "<br>";
-	sendMessage($chatID,"Attendance Percentage : "$link->plaintext);
+	sendMessage($chatID,"Attendance Percentage : ".$link->plaintext);
 	break;
 	
 	}	
@@ -122,7 +122,7 @@ $c=0;
 }
 
 
-if(exec==0)
+if($exec==0)
 {
 switch($text)
 {
@@ -159,8 +159,11 @@ switch($text)
 
 function sendMessage($chatID,$text)
 {
+	$botToken = "1264179630:AAF_DNfcJVOSV2_c_fguu6viJScqaWNm7r4";
+	$website = "https://api.telegram.org/bot".$botToken;
+
 	
-	$url = $GLOBALS[website]."/sendMessage?chat_id=$chatID&text=".urlencode($text);
+	$url = $website."/sendMessage?chat_id=$chatID&text=".urlencode($text);
 	file_get_contents($url);
 }
 function begnWith($str, $begnString) {
@@ -172,4 +175,3 @@ function begnWith($str, $begnString) {
 
 
 ?>
-
