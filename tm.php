@@ -18,7 +18,7 @@ $agg = json_encode($update,JSON_PRETTY_PRINT);
 
 $exec=0;
 $w=0;
- if(begnWith($text,"16881"))
+ if(begnWith($text,"1"))
  {
 	 if(strlen($text)==10)
 		 $exec=1;
