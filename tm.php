@@ -73,6 +73,7 @@ $res= login("http://studentscorner.vardhaman.org/student_corner_index.php",$data
 		if($a=="Invalid RollNumber/Web Access Key" or $a=="Invalid Web Access Key")
 		{
 			 $flag=2;
+			sendMessage($chatID,"Invalid Credentials"));
 		//header("location:alert.html");
         
             break;		 
