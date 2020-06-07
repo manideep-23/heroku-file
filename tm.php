@@ -146,8 +146,8 @@ switch($text)
 		case"/my_name":
 		sendMessage($chatID,$name);
 		   $emoji = "\xE2\x98\x94";
-                  $content = array('chat_id' => $id, 'text' => json_decode('"'.$emoji.'"');
-                  sendMessage($content);
+                  $text = json_decode('"'.$emoji.'"'));
+                  sendMessage($chatID,$text);
 
 		break;
 		case"/who_am_i":
