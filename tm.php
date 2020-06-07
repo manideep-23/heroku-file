@@ -144,8 +144,12 @@ switch($text)
 		sendMessage($chatID,"hello $name2..cheese");
 		break;
 		case"/my_name":
-		sendMessage($chatID,$name);
+		$utf8emoji = '\xF0\x9F\x98\x81';
+		sendMessage($chatID,$name." ".telegram_emoji($utf8emoji));
 		 
+
+		
+
 		break;
 		case"/who_am_i":
 		sendMessage($chatID,"I am a vardhaman Bot..What's Next?");
@@ -163,8 +167,18 @@ switch($text)
 }
 
 
+function telegram_emoji($utf8emoji) {
+    preg_replace_callback(
+        '@\\\x([0-9a-fA-F]{2})@x',
+        function ($captures) {
+            return chr(hexdec($captures[1]));
+        },
+        $utf8emoji
+    );
 
-		
+    return $utf8emoji;
+}
+
 
 
 
