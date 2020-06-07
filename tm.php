@@ -145,6 +145,10 @@ switch($text)
 		break;
 		case"/my_name":
 		sendMessage($chatID,$name);
+		   $emoji = "\xE2\x98\x94";
+                  $content = array('chat_id' => $id, 'text' => json_decode('"'.$emoji.'"');
+                  sendMessage($content);
+
 		break;
 		case"/who_am_i":
 		sendMessage($chatID,"I am a vardhaman Bot..What's Next?");
