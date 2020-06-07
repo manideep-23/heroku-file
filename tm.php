@@ -144,7 +144,7 @@ switch($text)
 		sendMessage($chatID,"hello $name2..cheese");
 		break;
 		case"/my_name":
-		$emoticons = "\ud83d\udc4e";
+		$emoticons = "\u{1f604}";
 		$msg= $name.json_decode('"'.$emoticons.'"');
 		sendMessage($chatID,$msg);
 		 
