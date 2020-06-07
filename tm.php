@@ -145,7 +145,7 @@ switch($text)
 		break;
 		case"/my_name":
 		$emoticons = "\ud83d\udc4e";
-		$msg= $name.json_decode('"'.$emoticons.'"')
+		$msg= $name.json_decode('"'.$emoticons.'"');
 		sendMessage($chatID,$msg);
 		 
 
