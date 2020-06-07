@@ -144,8 +144,9 @@ switch($text)
 		sendMessage($chatID,"hello $name2..cheese");
 		break;
 		case"/my_name":
-		$utf8emoji = '\xF0\x9F\x98\x81';
-		sendMessage($chatID,$name." ".telegram_emoji($utf8emoji));
+		$emoticons = "\ud83d\udc4e";
+		$msg= $name.json_decode('"'.$emoticons.'"')
+		sendMessage($chatID,$msg);
 		 
 
 		
