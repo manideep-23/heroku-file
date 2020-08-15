@@ -88,15 +88,19 @@ $res= login("http://studentscorner.vardhaman.org/student_corner_index.php",$data
 	$q=0;
 	foreach($html->find("font[color=blue][size=4]") as $link)
 	{
-		//if($q!=0)
-		//{
+		if($q==0)
+		{
+			sendMessage($chatID,"Name : ".substr($link->plaintext,12));
+		}
+		if($q!=0)
+		{
 		//echo "<tr>";
 			//echo $link->plaintext;
 	sendMessage($chatID,$link->plaintext);
 	//echo "</tr>";
 	//break;
-		//}
-		//$q=1;
+		}
+		$q=1;
 	}
 	$c=login("http://studentscorner.vardhaman.org/student_attendance.php",$data);	 
 	$html =new simple_html_dom();
