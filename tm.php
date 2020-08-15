@@ -91,7 +91,7 @@ $res= login("http://studentscorner.vardhaman.org/student_corner_index.php",$data
 		//if($q!=0)
 		//{
 		//echo "<tr>";
-			echo $link->plaintext;
+			//echo $link->plaintext;
 	sendMessage($chatID,$link->plaintext);
 	//echo "</tr>";
 	//break;
