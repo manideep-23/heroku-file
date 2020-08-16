@@ -62,6 +62,20 @@ function login($url,$data){
     curl_close ($login);
     unset($login);    
 }
+	$url = 'http://studentscorner.vardhaman.org/';
+$array = get_headers($url);
+$string = $array[0];
+	$rrt=0;
+if(strpos($string,"200"))
+  {
+   $rrt=1;
+  }
+  else
+  {
+   sendMessage($chatID,"Vardhaman server is currently down,Try again later!");  
+  }
+	if($rrt==1)
+	{
 $res= login("http://studentscorner.vardhaman.org/student_corner_index.php",$data);
  	$html =new simple_html_dom();
 	$html->load($res);
@@ -127,6 +141,7 @@ $u=0;
 
                   
  }
+	}
 	
 	
 	
